@@ -98,6 +98,11 @@ a {
   font-size: 14px;
 }
 
+.menu__item:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 button {
   border-radius: 6px;
   overflow: visible;
@@ -139,9 +144,15 @@ h1 {
   background: #FFFFFF;
   color: #ED4C5C;
   font-weight: 600;
-  border: none;
+  border: 1px solid #ffffff;
   padding: 17px 52px;
   margin-top: 56px;
+}
+
+.hero__button:hover,
+.menu__button:hover {
+  background-color: #b92a21;
+  color: #ffffff;
 }
 
 .info__container {
@@ -234,6 +245,9 @@ h3 {
   border-radius: 8px;
   margin: auto;
   margin-top: -93px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   text-align: center;
   padding: 32px;
@@ -258,7 +272,7 @@ h3 {
 }
 
 .technology__col {
-  padding-bottom: 108px;
+  padding-bottom: 130px;
   text-align: center;
 }
 
@@ -270,12 +284,10 @@ h3 {
 }
 
 .technology__logo {
-  max-width: 80px;
-  max-height: 80px;
-}
-
-.technology__tytle {
-  margin-top: 19px;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  object-fit: contain;
 }
 
 .technology__description {
@@ -354,6 +366,14 @@ input {
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
+  outline: none;
+  outline-offset: inherit;
+}
+
+.form__submit:hover {
+  color: #ED4C5C;
+  font-weight: 600;
+  background: #ffffff;
 }
 
 .footer {
@@ -399,6 +419,10 @@ input {
   padding-bottom: 86px;
 }
 
+.link__join:hover {
+  opacity: 0.5;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     width: 85%;
@@ -407,6 +431,7 @@ input {
   .feauters__card{
     width: 85%;
     margin-top: -20%;
+    height: 240px;
   }
 }
 
