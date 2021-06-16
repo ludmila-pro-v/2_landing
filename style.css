@@ -368,12 +368,14 @@ input {
   cursor: pointer;
   outline: none;
   outline-offset: inherit;
+  -webkit-appearance: none;
 }
 
 .form__submit:hover {
   color: #ED4C5C;
   font-weight: 600;
   background: #ffffff;
+  -webkit-appearance: none;
 }
 
 .footer {
