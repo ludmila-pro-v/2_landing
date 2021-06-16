@@ -423,6 +423,40 @@ input {
   opacity: 0.5;
 }
 
+#menu__toggle {
+  display: none;
+}
+
+.menu__btn {
+  display: none; 
+  align-items: center;  
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__hamburger,
+.menu__hamburger::before,
+.menu__hamburger::after
+{
+  display: block;
+  position: absolute;
+  width: 26px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.menu__hamburger::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__hamburger::after {
+  content: '';
+  top: 8px;
+}
+
 @media screen and (max-width: 1200px) {
   .container {
     width: 85%;
@@ -436,8 +470,46 @@ input {
 }
 
 @media screen and (max-width: 992px) {
-  .menu__nav {
+  .menu__logo {
     display: none;
+  }
+
+  .menu__nav {
+    /* display: none; */
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    margin: 0;
+    padding: 95px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #554444;
+    opacity: 0.95;
+  }
+
+  .menu__btn {
+    display: flex;
+  }
+
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__nav {
+    visibility: visible;
+    /* left: 0; */
   }
 
   .info__container {
@@ -476,6 +548,8 @@ input {
 
 
 @media screen and (max-width: 768px) {
+
+
   h1 {
     font-size: 42px;
   }
